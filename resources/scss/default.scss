@@ -1,28 +1,35 @@
-/*------------------------------------------------------------------------------
-*    CSS Document (http://www.w3.org/Style/CSS/)
-*    For STYLEGUIDE, reffer to /config/_styleguide.scss
------------------------------------------------------------------------------*/
+//------------------------------------------------------------------------------
+//   Import all styles
+//-----------------------------------------------------------------------------
 
-//------ALL VARIABLES
-@import 'config/variables';
+//------CORE
+// Core files prepare DOM by making HTML elements consistent across browsers
+// and removing built-in browser styling.
+@import 'core/all';
 
-//------MIXINS
-@import 'mixins/breakpoints';
-// @import 'mixins/borderRadius';
-// @import 'mixins/transition';
-// @import 'mixins/transform';
-// @import 'mixins/calc';
-// @import 'mixins/placeholder';
-// @import 'mixins/fontFace';
+//------MIXINS and functions
+@import 'lib/all';
 
-//------MAIN CONFIG
-@import 'config/reset';
-@import 'config/baseConfig';
-@import 'config/typography';
-@import 'config/helpers';
+//------SETTINGS FOR PROJECT
 
-//------COMPONENTS
+//------variable, breakpoints, typo
+@import
+    'settings/settings.breakpoints',
+    'settings/settings.colors',
+    'settings/settings.wrappers',
+    'settings/settings.links',
+    'settings/settings.paths',
+    'settings/settings.typography',
+    'settings/settings.global';
 
 //------BLOCKS
-@import 'blocks/header/header';
-@import 'blocks/footer/footer';
+//------COMPONENTS
+//------PAGES
+
+
+//------TRUMPS
+@import
+    'trumps/trumps.clearfix',
+    'trumps/trumps.hacks',
+    'trumps/trumps.ie',
+    'trumps/trumps.print'; 
